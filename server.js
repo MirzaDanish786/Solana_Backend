@@ -31,7 +31,7 @@ app.use("/uploads", express.static("uploads"));
 const port = 3000;
 app.use(
   cors({
-    origin: "*",
+    origin: "http://localhost:4000",
     credentials: true,
   })
 );
