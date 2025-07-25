@@ -41,9 +41,8 @@ const userSchema = new mongoose.Schema(
     },
     newEmail: {
       type: String,
-      unique: true,
-      sparse: true,
       lowercase: true,
+      default: undefined,
       trim: true,
       match: [
         /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,

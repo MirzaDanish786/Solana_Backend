@@ -380,6 +380,21 @@ export const updatePasswordController = async (req, res) => {
     });
   }
 };
+
+export const verifyTokenController = async (req, res) => {
+  try {
+    return res
+      .status(200)
+      .json({ message: "Token is verified", success: true });
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({
+      success: false,
+      message: error.message || "Internal Server Error",
+    });
+  }
+};
+
 // Logout:
 // export const logoutController = async (req, res) => {
 //   try {

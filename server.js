@@ -28,7 +28,7 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 app.use("/uploads", express.static("uploads"));
-const port = 4000;
+const port = 3000;
 app.use(
   cors({
     origin: "*",

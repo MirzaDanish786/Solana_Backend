@@ -5,7 +5,7 @@ export const isAuthenticated = (req, res, next) => {
     // console.log(token );
   const authHeader = req?.headers?.authorization;
   if(!authHeader || !authHeader.startsWith('Bearer ')){
-    return res.status(401).json({message: "Bearer token is missing!" })
+    return res.status(401).json({message: "Bearer token is missing!", success: false })
   }
 
   const token = authHeader.split(' ')[1];
